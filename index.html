@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Collection de Photocards KPop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,26 +19,40 @@
             </ul>
         </nav>
     </header>
+    
+    <section id="filters">
+        <label for="group">Filtrer par groupe:</label>
+        <select id="group">
+            <option value="all">Tous les groupes</option>
+            <option value="groupe1">Groupe 1</option>
+            <option value="groupe2">Groupe 2</option>
+            <!-- Ajoutez d'autres options de groupe -->
+        </select>
+        <label for="album">Filtrer par album:</label>
+        <select id="album">
+            <option value="all">Tous les albums</option>
+            <option value="album1">Album 1</option>
+            <option value="album2">Album 2</option>
+            <!-- Ajoutez d'autres options d'album -->
+        </select>
+    </section>
+
     <main>
         <section id="collection">
             <h2>Mes Photocards</h2>
             <div class="gallery">
-                <!-- Photocard 1 -->
-                <div class="photocard">
+                <div class="photocard" data-group="groupe1" data-album="album1">
                     <img src="images/photo1.jpg" alt="Membre 1 - Groupe 1">
                     <p>Membre 1 - Groupe 1 - Album 1</p>
                 </div>
-                <!-- Photocard 2 -->
-                <div class="photocard">
+                <div class="photocard" data-group="groupe2" data-album="album2">
                     <img src="images/photo2.jpg" alt="Membre 2 - Groupe 2">
                     <p>Membre 2 - Groupe 2 - Album 2</p>
                 </div>
-                <!-- Photocard 3 -->
-                <div class="photocard">
+                <div class="photocard" data-group="groupe3" data-album="album3">
                     <img src="images/photo3.jpg" alt="Membre 3 - Groupe 3">
                     <p>Membre 3 - Groupe 3 - Album 3</p>
                 </div>
-                <!-- Ajoute autant de photocards que nécessaire -->
             </div>
         </section>
         <section id="wishlist">
@@ -45,12 +60,12 @@
             <ul>
                 <li>Photocard 1</li>
                 <li>Photocard 2</li>
-                <!-- Répète ce bloc pour chaque item de la wishlist -->
             </ul>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Ma Collection de Photocards KPop</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
